@@ -15,6 +15,8 @@ tags:
 
 ![範例圖片](https://i.imgur.com/xKe7t11.png)
 
+<!--more-->
+
 ## 遇到的問題
 Shiny寫出檔案到當下路徑會定時被還原，查了發現是shinyapps.io不允許本地檔案存儲，因此要調到其他儲存平台。
 使用自己的shiny server不會有這種問題。

@@ -5,7 +5,7 @@
 # Site
 title: Same Here
 subtitle: Python/R/SQL筆記
-description: 
+description: 休息是為了走更長的路
 author: Same 
 language: zh-tw
 timezone: 
@@ -80,3 +80,9 @@ deploy:
   type: git
   repo: git@github.com:samex4x4/samex4x4.github.io.git
   branch: master
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
