@@ -7,7 +7,7 @@ tags:
     - shinyapps.io
 ---
 
-
+[code](https://github.com/samex4x4/Shiny_AUC_Score_Update)
 
 ## 需求
 建立一個使用者可以上傳分數，看到目前比賽分數的平台，
@@ -30,13 +30,6 @@ When going through the different storage type options below, keep in mind that i
 ## 解決辦法
 安裝googlesheets包做資料存儲/讀取，由於我的數據是小量數據(最多不會超過幾百筆)，因此googlesheet就夠用了。
 大量數據建議還是導入資料庫存儲。
-
-
-## 範例程式碼
-
-### server.R
-### ui.R
-### global.R
 
 
 
