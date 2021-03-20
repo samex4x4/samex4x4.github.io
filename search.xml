@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>shinyapps.io檔案存放</title>
+    <url>/2019/03/02/shinyappsio-local-file-cannot-save/</url>
+    <content><![CDATA[<p><a href="https://github.com/samex4x4/Shiny_AUC_Score_Update" target="_blank" rel="noopener">code</a></p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>建立一個使用者可以上傳分數，看到目前比賽分數的平台，<br>需要紀錄每次使用者上傳的分數以及上傳時間。</p>
+<p><img src="https://i.imgur.com/xKe7t11.png" alt="範例圖片"></p>
+<a id="more"></a>
+<h2 id="遇到的問題"><a href="#遇到的問題" class="headerlink" title="遇到的問題"></a>遇到的問題</h2><p>Shiny寫出檔案到當下路徑會定時被還原，查了發現是shinyapps.io不允許本地檔案存儲，因此要調到其他儲存平台。<br>使用自己的shiny server不會有這種問題。<br>參照 <a href="http://shiny.rstudio.com/articles/persistent-data-storage.html" target="_blank" rel="noopener">Persistent data storage in Shiny apps</a></p>
+<p><code>When going through the different storage type options below, keep in mind that if your Shiny app is hosted on shinyapps.io, you will have to use a remote storage method for the time being. RStudio plans to implement persistent storage on shinyapps.io soon. In the meantime, using local storage is only an option if you’re hosting your own Shiny Server, though that comes at the price of having to manage a server and should only be done if you’re comfortable with administering a server.</code></p>
+<h2 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h2><p>安裝googlesheets包做資料存儲/讀取，由於我的數據是小量數據(最多不會超過幾百筆)，因此googlesheet就夠用了。<br>大量數據建議還是導入資料庫存儲。</p>
+]]></content>
+      <tags>
+        <tag>R</tag>
+        <tag>shiny</tag>
+        <tag>shinyapps.io</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo 頁面修改</title>
+    <url>/2019/03/03/hexo-change/</url>
+    <content><![CDATA[<p>紀錄一些修改的部分</p>
+<a id="more"></a>
+<h2 id="修改主題"><a href="#修改主題" class="headerlink" title="修改主題"></a>修改主題</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p>修改_config.yml<br>theme: next</p>
+<h2 id="增加頭像"><a href="#增加頭像" class="headerlink" title="增加頭像"></a>增加頭像</h2><p>hexo new page “uploads”<br>將圖片放到 source/uploads 中</p>
+<p>修改 themes/next/_config.yml<br>avatar: /uploads/cat-01.jpg</p>
+<p><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%A4%B4%E5%83%8F" target="_blank" rel="noopener">參照</a></p>
+<h2 id="修改背景"><a href="#修改背景" class="headerlink" title="修改背景"></a>修改背景</h2><p>打開themes/next/sources/css/_schemes/ 找到自己選擇的主題，修改index.styl</p>
+<p><a href="https://sqmwin.github.io/2017/12/31/next-background-image/" target="_blank" rel="noopener">參照</a></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  background:url(/images/background.jpg);</span><br><span class="line">  background-attachment: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="增加關於我、tag頁面"><a href="#增加關於我、tag頁面" class="headerlink" title="增加關於我、tag頁面"></a>增加關於我、tag頁面</h2><p>hexo new page “tags”<br>hexo new page “about”</p>
+<p><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E6%A0%87%E7%AD%BE%E4%BA%91%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">參照</a></p>
+<p>修改source/tags/index.md</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: All tags</span><br><span class="line">date: 2019-03-02 23:51:22</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>修改 themes/next/_config.yml<br>把menu中的about, tags註解打開</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">about: /about/ || user</span><br><span class="line">tags: /tags/ || tags</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>
