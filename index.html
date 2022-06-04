@@ -284,6 +284,265 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://samex4x4.github.io/2022/06/04/how-to-prepare-for-the-google-cloud-professional-data-engineer-exam/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Same">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/cat-01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Same Here">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/06/04/how-to-prepare-for-the-google-cloud-professional-data-engineer-exam/" itemprop="url">如何準備2022 Google Cloud Professional Data Engineer Certification</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2022-06-04T17:02:28+08:00">
+                2022-06-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h1><p><img src="https://i.imgur.com/46DSvvn.png" alt="證照圖"></p>
+<p>近期因應工作內容的變動，有感自己對於平常在使用的Google Cloud Platform(GCP)認識不夠深，想說不如報名考試看看自己的熟悉程度(兼逼迫自己學習)，很幸運的一次就通過了，在這裡紀錄一下我認為該場考試要注意的項目以及我是如何準備的。</p>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>資料工程師(5y)，之前接觸過的GCP產品主要是Bigquery, Dataflow, Pub/Sub, Cloud Function等工具，最近在熟悉K8S。<br>去年有上完Coursera的<a href="https://www.coursera.org/professional-certificates/gcp-data-engineering" target="_blank" rel="noopener">課程</a>，不過過了一年差不多都忘光了(′．ω．`) </p>
+<p>這門課對Data Engineer常使用的GCP產品會介紹基礎知識的和應用場景，最後會有應考對策 &amp; 重點，之前完全沒碰過GCP的人不妨試試看，且有不少練習是可以直接操作上述的產品而不需要額外付費的。 </p>
+<p><img src="https://i.imgur.com/yeGFaQD.png" alt="Coursera"></p>
+<p>本次考試我抓一個月左右準備，大多是下班時間看考題以及閱讀文件(約1~2小時)。</p>
+<h1 id="考試流程"><a href="#考試流程" class="headerlink" title="考試流程"></a>考試流程</h1><h2 id="註冊"><a href="#註冊" class="headerlink" title="註冊"></a>註冊</h2><p>考試註冊<a href="https://cloud.google.com/certification/data-engineer" target="_blank" rel="noopener">網站</a><br>會進入，點選註冊後會導向到webssessor，註冊完成後就可以選擇要進行什麼考試了。<br><img src="https://i.imgur.com/lnBzopl.png" alt="webassessor"></p>
+<p>要注意考試會分成去考場以及遠端的，這次避免自己網路異常還是選擇了考場，台北的考場只有Systex_Taipei(恆逸教育訓練中心)，<br>另外雖然考試費用寫USD200，但我最後在購物車只有看到USD120，這點是比較疑惑的地方…。 </p>
+<p><img src="https://i.imgur.com/zWomxux.png" alt="testselect"></p>
+<h2 id="考試情況"><a href="#考試情況" class="headerlink" title="考試情況"></a>考試情況</h2><p>需提早15分鐘前報到，考試前會將你的包包收走，身上所有東西都要清空，現場還要我把褲管捲起來確認沒有小抄。 </p>
+<p>之後會帶你到一個單獨的房間進行考試，會有可以塗寫的板子讓你在考試過程中可以做點筆記。考試有50題，要在兩個小時內完成，完成後按Submit當下就會知道結果，分成兩種結果Pass/Fail，實際上考了幾分一周後會寄email過來，另外到底錯那些題是不知道的。</p>
+<p>考完可以收到一個連結可以去挑選小禮物。<br><img src="https://i.imgur.com/Tt6MGx1.png" alt="gift"></p>
+<h1 id="準備方法"><a href="#準備方法" class="headerlink" title="準備方法"></a>準備方法</h1><p>先閱讀網路上其他人的心得 -&gt; 閱讀官方文件(第一周) -&gt;　寫考題+根據考題中討論的文件再次閱讀(第二~四周)</p>
+<p>因為時間不太夠，第一周的時候我試著把我覺得比較重要的文件都看了一點(ex Bigtable的schema設計、Bigquery計價等等)，但文件真的頗多…，所以後來改採用直接讀網路上的考古題，邊讀邊記錄那些是常考的。就算無法讀完官方文件，也至少要把Best Practice給讀完，因為考題很多是聚焦在這些案例的實作中。<br>推薦閱讀這本: <a href="https://lucid.app/lucidchart/0ca44a63-4ea4-4d78-8367-2465512d21be/view?page=vf_Fs9CbV-a6#" target="_blank" rel="noopener">Google Cloud Data Engineer Data Dossier</a>，儘管有些東西現在有點過時，但該工具的設計場景以及原則卻是不變的，可以大致上知道這場考試會考那些功能。</p>
+<h2 id="Google-相關服務"><a href="#Google-相關服務" class="headerlink" title="Google 相關服務"></a>Google 相關服務</h2><p>在此也整理一下列出來會考的幾個服務，考題重要性依照我寫模擬試題 &amp; 考試當天的印象；</p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>考題重要性</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bigquery</td>
+<td>⭐⭐⭐⭐</td>
+<td>最常考的工具，必讀，包含語法/schema設計/如何與其他工具整合等等</td>
+</tr>
+<tr>
+<td>Dataflow</td>
+<td>⭐⭐⭐</td>
+<td>時常與 Pub/Sub 搭配，常見於streaming data，建議熟背各 <a href="https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines" target="_blank" rel="noopener">Windows</a> 的特性</td>
+</tr>
+<tr>
+<td>Pub/Sub</td>
+<td>⭐⭐⭐</td>
+<td>時常與 Dataflow 搭配，常見於streaming data，熟記Pull/Push的差異</td>
+</tr>
+<tr>
+<td>Cloud SQL</td>
+<td>⭐⭐</td>
+<td>資料庫，會有跟Spanner的比較</td>
+</tr>
+<tr>
+<td>Cloud Spanner</td>
+<td>⭐⭐⭐</td>
+<td>資料庫+cluster，建議熟讀schema設計</td>
+</tr>
+<tr>
+<td>Dataproc</td>
+<td>⭐⭐⭐</td>
+<td>Hadoop生態系，常見從本地端遷移的問題</td>
+</tr>
+<tr>
+<td>Bigtable</td>
+<td>⭐⭐⭐</td>
+<td>IoT常見工具，應對大量資料寫入，建議熟讀schema設計</td>
+</tr>
+<tr>
+<td>DataStore/FireStore</td>
+<td>⭐⭐</td>
+<td>NoSQL 工具，類似MongoDB</td>
+</tr>
+<tr>
+<td>Machine Learning</td>
+<td>⭐⭐⭐</td>
+<td>無關工具，要簡單了解有哪些模型以及如何優化模型，務必熟記overfit應對</td>
+</tr>
+<tr>
+<td>AI Platform</td>
+<td>⭐⭐</td>
+<td>在GCP上如何訓練模型，包含自製(Tensorflow) &amp; Google已經build好的一些模型使用</td>
+</tr>
+<tr>
+<td>Cloud Function</td>
+<td>⭐</td>
+<td>Serverless服務，也常整合Pub/Sub 做一些告警</td>
+</tr>
+<tr>
+<td>Cloud Dataprep</td>
+<td>⭐⭐</td>
+<td>資料前處理，適合給沒有coding 經驗的人使用(ex 分析師)</td>
+</tr>
+<tr>
+<td>Data Composer</td>
+<td>⭐⭐</td>
+<td>就是Airflow，在不同服務兼的任務相依性可做調配</td>
+</tr>
+<tr>
+<td>Datalab -&gt; Vertex AI Workbench</td>
+<td>⭐</td>
+<td>類Jupyter，完全沒用過…</td>
+</tr>
+<tr>
+<td>Cloud Storage</td>
+<td>⭐⭐⭐</td>
+<td>存放資料的工具，常考分派權限 &amp; 備份使用</td>
+</tr>
+<tr>
+<td>Cloud Logging</td>
+<td>⭐⭐</td>
+<td>除錯、檢查user有哪些操作常用</td>
+</tr>
+<tr>
+<td>DataStudio</td>
+<td>⭐</td>
+<td>資料視覺化工具，常與Bigquery搭配</td>
+</tr>
+<tr>
+<td>Cloud Fusion</td>
+<td>⭐⭐</td>
+<td>完全沒念到，甚至不知道這是什麼工具，卻考了兩題出來…</td>
+</tr>
+<tr>
+<td>Dialogflow</td>
+<td>⭐</td>
+<td>chatbot 服務，完全沒念到，也考了一題出來，會整合AI Platform裡的預處理模型(ex 語音轉文字)</td>
+</tr>
+</tbody>
+</table>
+<p>另外也常問的問題包含從本地端遷移上雲、權限設置(IAM)、怎樣減少成本等問題，這些就是每個工具各自有需要熟悉的地方了。</p>
+<h2 id="考題"><a href="#考題" class="headerlink" title="考題"></a>考題</h2><ul>
+<li><p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfkWEzBCP0wQ09ZuFm7G2_4qtkYbfmk_0getojdnPdCYmq37Q/viewform" target="_blank" rel="noopener">Google 官方的模擬試題</a></p>
+<blockquote>
+<p>約20題，有附上文件以及錯誤選項為什麼不對的說明，第一次寫考題推薦先練習這份，畢竟這一定最接近官方的考試</p>
+</blockquote>
+</li>
+<li><p><a href="https://www.examtopics.com/exams/google/professional-data-engineer/view/1/" target="_blank" rel="noopener">Examtopics</a></p>
+<blockquote>
+<p>考古題網站，因為時間不太夠所以後來我只看這個，針對每個題目做Tag和筆記，每5題要填一次機器人認證，大概看到一半左右會要求註冊帳號，到更後面約Topic2就要付費了。<br>另外答案錯誤率頗高，需要看網友討論才能確定是否為正確答案，有些問題會因為年代差異而有所分歧(ex 早年BQ不支援table的權限設定，所以有人會認為權限控管須設在dataset)，這些都是要注意的地方。<br>非常推薦閱讀這份考題，我考試時大概有1/5左右的題目是在上面閱讀過的，且可以透過這份考題琢磨常考重點。<br>我自己做筆記的情況大概會分成自己的熟練度/考題類型/其他人的討論文件等等。<br><img src="https://i.imgur.com/j6oaxwL.png" alt="自己做的筆記"></p>
+</blockquote>
+</li>
+<li><p><a href="https://www.udemy.com/course/google-cloud-professional-data-engineer-gcp-exams" target="_blank" rel="noopener">Udemy</a></p>
+<blockquote>
+<p>上面的考題唸完後，在網路上試著買了這份來考看看，不過最後我沒有全部做完，題目相對簡單且解說很少，不是很推薦。</p>
+</blockquote>
+</li>
+</ul>
+<p>以上就是這次的分享，再次覺得自己很幸運可以一次通過! 考試只是一個證明，實務操作上還有更多細節需要發想和面對呢。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://samex4x4.github.io/2019/03/03/hexo-change/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -569,7 +828,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -582,7 +841,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
@@ -619,7 +878,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
